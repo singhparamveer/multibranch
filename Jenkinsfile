@@ -62,7 +62,7 @@ pipeline {
       post {
         success {
           emailext(
-            subject: "${env.JOB_NAME} [${env.BUILD_NUMBER}] NEW RELEASE",
+            subject: "${env.JOB_NAME} [${env.BUILD_NUMBER}] NEW RELEASE after Sucess",
             body: """<p>'${env.JOB_NAME} [${env.BUILD_NUMBER}]' NEW RELEASE":</p>
             <p>Check console output at <a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a></p>""",
             to: "root@ip-172-31-28-169.us-east-2.compute.internal"
